@@ -18,7 +18,8 @@ export  interface PokemonDetailsType {
         name: string,
         url: string
     }
-    sprites: Sprite
+    sprites: Sprite,
+    types: any[],
 }
 
 interface Abilities {

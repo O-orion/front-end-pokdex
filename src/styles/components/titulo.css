@@ -7,7 +7,7 @@
 }
 
 .titulo {
-    color: var(--primary-color);
+    color: var(--text-color);
     font-family: "Press Start 2P";
     font-weight: 700;
     font-size: var(--font-size-xxl);

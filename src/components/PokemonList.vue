@@ -21,6 +21,7 @@
             :name="pokemon.name"
             :image="pokemon.sprites.front_default"
             :id="pokemon.id"
+            :types="pokemon.types"
             ></PokemonCard>
         </div>
     </section>

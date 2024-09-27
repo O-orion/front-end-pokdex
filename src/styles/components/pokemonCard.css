@@ -38,6 +38,16 @@
 }
 
 .pokemon-tags {
+    width: 100%;
     display: flex;
+    padding: 0 0 0 10px;
     gap: 5px;
+}
+
+.pokemon-tags  p {
+    color: #fff;
+    padding: 4px;
+    border-radius: 8px;
+    min-width: 50px;
+    text-align: center;
 }
