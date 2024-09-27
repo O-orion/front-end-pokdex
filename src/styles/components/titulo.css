@@ -1,0 +1,14 @@
+@import "../variables.css";
+
+.container {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    color: var(--primary-color);
+    font-family: "Press Start 2P";
+    font-weight: 700;
+    font-size: var(--font-size-xxl);
+}
