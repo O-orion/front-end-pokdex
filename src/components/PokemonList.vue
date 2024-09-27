@@ -6,6 +6,15 @@
     <section class="container-pokemon-list" >
         <div class="pokemon-list">
             <PokemonCard></PokemonCard>
+            <PokemonCard></PokemonCard>
+            <PokemonCard></PokemonCard>
+            <PokemonCard></PokemonCard>
+            <PokemonCard></PokemonCard>
+            <PokemonCard></PokemonCard>
+            <PokemonCard></PokemonCard>
+            <PokemonCard></PokemonCard>
+            <PokemonCard></PokemonCard>
+            <PokemonCard></PokemonCard>
         </div>
     </section>
 </template>
