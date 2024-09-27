@@ -1,0 +1,78 @@
+@import "../variables.css";
+
+.container-menu {
+    background-color: var(--primary-color);
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha em telas menores */
+}
+
+.links-menu {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap; /* Permite que os links se movam para a próxima linha em telas menores */
+}
+
+.link-menu {
+    color: var(--secondary-color);
+    background-color: var(--text-color);
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    font-size: var(--font-size-md);
+    font-weight:  var(--font-weight-regular);
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 4px var(--box-shadow-black);
+}
+
+.link-menu:hover {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+}
+
+.link-menu:active {
+    transform: scale(0.95);
+}
+
+.logo-menu {
+    width: var(--image-size-sm);
+}
+
+.profile-icon {
+    padding: 2px;
+    background-color: var(--text-color);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 2px 4px var(--box-shadow-black);
+}
+
+.icon {
+    color: #4b4b4b;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .links-menu {
+    
+        gap: 10px; /* Diminui o espaçamento entre os links */
+        align-items: center; /* Centraliza os links */
+    }
+
+    .logo-menu {
+        width: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .link-menu {
+        font-size: 15px; /* Diminui o tamanho da fonte em telas muito pequenas */
+    }
+
+}

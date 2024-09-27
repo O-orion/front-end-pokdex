@@ -1,11 +1,12 @@
 /* src/assets/styles/variables.css */
 :root {
     --text-color: rgba(255, 255, 255, 0.87);
-    --background-color: #242424;
-    --primary-color: #007BFF;
-    --secondary-color: #666666;
+    --background-color: #F0F0F0;
+    --primary-color: #FF6F00;
+    --secondary-color: #007BFF;
     --hover-color: #747bff;
     --button-bg: #f9f9f9;
+    --box-shadow-black: rgba(0, 0, 0, 0.1);
 
     /* Tamanhos de texto */
     --font-size-xs: 12px;
@@ -37,7 +38,7 @@
     --border-width-thick: 4px;
 
     /*  Espaçamento */
-    --spacing-xs: 4px;
+    --spacing-xs: 2px;
     --spacing-sm: 8px;
     --spacing-md: 16px;
     --spacing-lg: 24px;
