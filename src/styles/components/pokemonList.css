@@ -1,7 +1,7 @@
 @import "../variables.css";
 
 .container-pokemon-list {
-    padding: 20px;
+    padding: 25px;
     display: flex;
     justify-content: center;
 }
@@ -9,15 +9,15 @@
 .pokemon-list {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 /* Estilos para tornar os cartões responsivos */
 .pokemon-list > * { /* Seleciona todos os filhos da pokemon-list */
     flex: 1 1 200px; /* Permite que os cartões cresçam e encolham com um tamanho base de 200px */
-    min-width: 150px; /* Largura mínima para os cartões */
-    max-width: 250px; /* Largura máxima para os cartões */
+    min-width: 250px; /* Largura mínima para os cartões */
+    max-width: 290px; /* Largura máxima para os cartões */
 }
 
 @media (max-width: 600px) {
