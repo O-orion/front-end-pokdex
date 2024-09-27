@@ -1,0 +1,39 @@
+@import "../variables.css";
+
+.card-pokemon{
+    width: 200px;
+    height: 220px;
+    border-radius: 8px;
+    border: var(--secondary-color) 2px solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+}
+
+.imagem-pokemon {
+    width: 90px;
+}
+
+.informacoes-pokemon {
+    width: 100%;
+    padding: 0 0 0 10px;
+}
+
+.nome-pokemon {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.numero-pokemon {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.pokemon-tags {
+    display: flex;
+    gap: 5px;
+}

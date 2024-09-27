@@ -1,0 +1,6 @@
+@import "../variables.css";
+
+.container-pokemon-list {
+    border: red 2px solid;
+    padding: 20px;
+}
