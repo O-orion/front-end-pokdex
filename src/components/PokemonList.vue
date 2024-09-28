@@ -2,6 +2,7 @@
     import PokemonCard from './PokemonCard.vue';
     import { onMounted } from 'vue';
     import { usePokemonStore } from '../stores/pokemonStore';
+import PaginationList from './PaginationList.vue';
 
     const store = usePokemonStore();
 
@@ -13,6 +14,7 @@
 </script>
 
 <template>
+    <PaginationList></PaginationList>
     <section class="container-pokemon-list" >
         <div class="pokemon-list" v-if="!store.isLoading">
             <PokemonCard 
@@ -24,6 +26,7 @@
             :types="pokemon.types"
             ></PokemonCard>
         </div>
+
     </section>
 </template>
 
