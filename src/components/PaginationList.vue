@@ -12,8 +12,8 @@ const currentPage = computed(() => store.currentPage);
 
 const paginatedPages = computed(() => {
   const visiblePages = [];
-  const maxVisiblePages = 5; 
-  const startPage = Math.max(currentPage.value - 2, 2); 
+  const maxVisiblePages = 5;
+  const startPage = Math.max(currentPage.value - 2, 2);
   const endPage = Math.min(currentPage.value + 2, totalPages.value - 1);
 
   for (let i = startPage; i <= endPage && visiblePages.length < maxVisiblePages; i++) {

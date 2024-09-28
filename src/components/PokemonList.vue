@@ -3,17 +3,18 @@
     import { onMounted } from 'vue';
     import { usePokemonStore } from '../stores/pokemonStore';
 import PaginationList from './PaginationList.vue';
+import SearchBar from './SearchBar.vue';
 
     const store = usePokemonStore();
 
     onMounted(() => {
         store.loadPokemons(0,20)
-     
     })
 
 </script>
 
 <template>
+    <SearchBar></SearchBar>
     <PaginationList></PaginationList>
     <section class="container-pokemon-list" >
         <div class="pokemon-list" v-if="!store.isLoading">

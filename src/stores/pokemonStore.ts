@@ -54,6 +54,25 @@ export const usePokemonStore = defineStore('pokemonStore', {
       this.currentPage = pageNumber;
       this.loadPokemons(offset, this.limit);
     },
+
+    async searchPokemon (name: string) {
+      this.isLoading = true;
+      
+      if (name.trim() === "") {
+        this.loadPokemons();
+        return
+      }
+
+      try {
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`);
+        this.pokemons = [response.data as PokemonDetailsType]
+      } catch (error) {
+        console.error('error', error);
+
+      }finally {
+        this.isLoading = false;
+      }
+    }
   },
 });
 
