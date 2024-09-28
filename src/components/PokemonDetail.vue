@@ -44,19 +44,20 @@ const getTypeColor = (typeName: string): string => {
         <section class="pokemon-body">
             <h2 class="pokemon-habilities">Habilidades</h2>
             <div :style="{ backgroundColor: getTypeColor(pokemon?.types[0].type.name) }" class="borda"></div>
-            <PokemonAbilities :background="getTypeColor(pokemon?.types[0].type.name)" :abilities="pokemon?.abilities" ></PokemonAbilities>
+            <PokemonAbilities :background="getTypeColor(pokemon?.types[0].type.name)" :abilities="pokemon?.abilities">
+            </PokemonAbilities>
 
             <h2 class="pokemon-habilities">Estatisticas</h2>
             <div :style="{ backgroundColor: getTypeColor(pokemon?.types[0].type.name) }" class="borda"></div>
-            <PokemonStatus :status="pokemon?.stats" ></PokemonStatus>
+            <PokemonStatus :status="pokemon?.stats"></PokemonStatus>
 
             <h2 class="pokemon-habilities">Moves</h2>
             <div :style="{ backgroundColor: getTypeColor(pokemon?.types[0].type.name) }" class="borda"></div>
-            <PokemonMoves :moves="pokemon?.moves" ></PokemonMoves>
+            <PokemonMoves :background="getTypeColor(pokemon?.types[0].type.name)" :moves="pokemon?.moves"></PokemonMoves>
 
             <h2 class="pokemon-habilities">Shiny</h2>
             <div :style="{ backgroundColor: getTypeColor(pokemon?.types[0].type.name) }" class="borda"></div>
-            <PokemonShiny :shiny="pokemon?.sprites" ></PokemonShiny>
+            <PokemonShiny :shiny="pokemon?.sprites"></PokemonShiny>
 
         </section>
     </section>

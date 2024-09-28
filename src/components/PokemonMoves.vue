@@ -2,7 +2,8 @@
     import { defineProps } from 'vue';
 
     const props = defineProps<{
-        moves: any[] | undefined
+        moves: any[] | undefined,
+        background: string
     }>();
 
 
@@ -11,7 +12,7 @@
 <template>
     <section class="container-moves">
         <div class="moves-pokemon">
-            <div class="box-move" v-for="move in moves">
+            <div :style="{backgroundColor: background}" class="box-move" v-for="move in moves">
                 <p> {{ move.move.name }} </p>
             </div>
         </div>
