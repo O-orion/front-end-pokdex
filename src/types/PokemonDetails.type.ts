@@ -20,6 +20,7 @@ export  interface PokemonDetailsType {
     }
     sprites: Sprite,
     types: any[],
+    stats: any[]
 }
 
 interface Abilities {

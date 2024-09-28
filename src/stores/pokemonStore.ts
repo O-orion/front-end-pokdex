@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
-import { Pokemon, PokemonListType } from '../types/PokemonList.type';
+import { Pokemon } from '../types/PokemonList.type';
 import { PokemonDetailsType } from '../types/PokemonDetails.type';
 
 export const usePokemonStore = defineStore('pokemonStore', {
@@ -72,6 +72,21 @@ export const usePokemonStore = defineStore('pokemonStore', {
       }finally {
         this.isLoading = false;
       }
+    },
+
+    async fetchPokemonById(id: number) {
+      this.isLoading = true;
+
+      try {
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        return response.data as PokemonDetailsType;
+
+      } catch (error) {
+        console.log(error);
+      } finally {
+        this.isLoading = false;
+      }
+
     }
   },
 });
