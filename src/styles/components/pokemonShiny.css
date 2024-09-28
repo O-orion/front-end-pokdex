@@ -1,0 +1,53 @@
+.container-shiny {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pokemons-shiny {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .pokemons-shiny img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .pokemons-shiny:hover {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .container-shiny {
+      flex-direction: column;
+    }
+  
+    .pokemons-shiny {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pokemons-shiny {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
