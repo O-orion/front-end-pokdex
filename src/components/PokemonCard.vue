@@ -14,6 +14,10 @@ import { TypesPokemon } from '../types/Types.enum';
         return TypesPokemon[typeName as keyof typeof TypesPokemon]  || '#000'
     }
 
+    const capitalizeFirstLetter = (name: string): string => {
+        return name.charAt(0).toLocaleUpperCase() + name.slice(1).toLowerCase()
+    }
+
 </script>
 
 <template>
@@ -21,12 +25,12 @@ import { TypesPokemon } from '../types/Types.enum';
         <img  class="imagem-pokemon" :src="image" :alt="name">
 
         <div class="informacoes-pokemon">
-            <p class="nome-pokemon" >{{ name }}</p>
+            <p class="nome-pokemon" >{{ capitalizeFirstLetter(name) }}</p>
             <p class="numero-pokemon" >#000{{ id }}</p>
         </div>
         <div class="pokemon-tags">
             <p v-for="type in types" :style="{ backgroundColor: getTypeColor(type.type.name) }">
-                {{ type.type.name  }}
+                {{ capitalizeFirstLetter(type.type.name)  }}
             </p>
         </div>
     </section>
