@@ -4,6 +4,7 @@ import { PokemonDetailsType } from '../types/PokemonDetails.type';
 import { TypesPokemon } from '../types/Types.enum';
 import PokemonAbilities from './PokemonAbilities.vue';
 import PokemonStatus from './PokemonStatus.vue';
+import PokemonMoves from './PokemonMoves.vue';
 
 const props = defineProps<{
     pokemon: PokemonDetailsType | null
@@ -47,6 +48,11 @@ const getTypeColor = (typeName: string): string => {
             <h2 class="pokemon-habilities">Estatisticas</h2>
             <div :style="{ backgroundColor: getTypeColor(pokemon?.types[0].type.name) }" class="borda"></div>
             <PokemonStatus :status="pokemon?.stats" ></PokemonStatus>
+
+            <h2 class="pokemon-habilities">Moves</h2>
+            <div :style="{ backgroundColor: getTypeColor(pokemon?.types[0].type.name) }" class="borda"></div>
+            <PokemonMoves :moves="pokemon?.moves" ></PokemonMoves>
+
         </section>
     </section>
 </template>
