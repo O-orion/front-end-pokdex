@@ -5,6 +5,7 @@
     import PaginationList from './PaginationList.vue';
     import SearchBar from './SearchBar.vue';
     import { useRouter } from 'vue-router';
+import Loading from './Loading.vue';
 
     const store = usePokemonStore();
     const router = useRouter();
@@ -23,7 +24,8 @@
     <SearchBar></SearchBar>
     <PaginationList></PaginationList>
     <section class="container-pokemon-list" >
-        <div class="pokemon-list" v-if="!store.isLoading">
+        <Loading v-if="store.isLoading" ></Loading>
+        <div class="pokemon-list" v-else>
             <PokemonCard 
             v-for="pokemon in store.pokemons"
             :key="pokemon.id"

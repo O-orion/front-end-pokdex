@@ -5,6 +5,7 @@ import PokemonDetail from '../components/PokemonDetail.vue';
 import { ref } from 'vue';
 import { usePokemonStore } from '../stores/pokemonStore';
 import { PokemonDetailsType } from '../types/PokemonDetails.type';
+import Loading from '../components/Loading.vue';
 
 const route = useRoute();
 const pokemonId = Array.isArray(route.params.id) ? Number(route.params.id[0]) : Number(route.params.id);
@@ -15,15 +16,14 @@ const isLoading = ref(false);
 onMounted(async () => {
     isLoading.value = true;
     pokemonDetails.value = await store.fetchPokemonById(pokemonId) as PokemonDetailsType;
-    console.log(pokemonDetails.value)
     isLoading.value = false;
 })
 
-console.log(pokemonDetails.value)
 </script>
 
 <template>
-    <PokemonDetail  :pokemon="pokemonDetails"></PokemonDetail>
+    <Loading v-if="store.isLoading" ></Loading>
+    <PokemonDetail  :pokemon="pokemonDetails"  v-else ></PokemonDetail>
 </template>
 
 <style></style>

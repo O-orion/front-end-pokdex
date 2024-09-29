@@ -11,4 +11,4 @@
     </section>
 </template>
 
-<style src="../styles//components/loading.css" ></style>
+<style  scoped src="../styles//components/loading/loading.css" ></style>
