@@ -15,9 +15,12 @@ import { TypesPokemon } from '../types/Types.enum';
     }
 
     const capitalizeFirstLetter = (name: string): string => {
+        if (!name) return ""; 
+
         return name.charAt(0).toLocaleUpperCase() + name.slice(1).toLowerCase()
     }
 
+    
 </script>
 
 <template>

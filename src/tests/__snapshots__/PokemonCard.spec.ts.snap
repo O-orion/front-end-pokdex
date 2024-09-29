@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PokemonCard.vue > deve renderizar o componente corretamente (snapshot) 1`] = `
+"<section class="card-pokemon"><img class="imagem-pokemon" src="https://example.com/squirtle.png" alt="squirtle">
+  <div class="informacoes-pokemon">
+    <p class="nome-pokemon">Squirtle</p>
+    <p class="numero-pokemon">#0007</p>
+  </div>
+  <div class="pokemon-tags">
+    <p style="background-color: rgb(104, 144, 240);">Water</p>
+  </div>
+</section>"
+`;
