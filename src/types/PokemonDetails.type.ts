@@ -1,4 +1,4 @@
-export  interface PokemonDetailsType {
+/*export  interface PokemonDetailsType {
     abilities: Abilities[],
     base_experience: number,
     cries: { latest: string, legacy: string },
@@ -21,6 +21,31 @@ export  interface PokemonDetailsType {
     sprites: Sprite,
     types: any[],
     stats: any[]
+} */
+
+export interface PokemonDetailsType {
+        abilities: Abilities[],
+        base_experience?: number,
+        cries?: { latest: string, legacy: string },
+        froms?: Form[],
+        game_indices?: Game_indices[],
+        height: number,
+        held_items?: Held_items[],
+        id: number,
+        is_default: boolean,
+        location_area_encounters?: string,
+        moves: any[],
+        name: string,
+        order?: number,
+        past_abilities?: any[],
+        past_types?: any[],
+        species: {
+            name: string,
+            url: string
+        },
+        sprites: Sprite,
+        types: any[],
+        stats: any[]
 }
 
 interface Abilities {
