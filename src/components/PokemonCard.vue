@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { TypesPokemon } from '../types/Types.enum';
+import { capitalizeFirstLetter } from '../utils/methods';
+import { getTypeColor } from '../utils/methods';
 
     interface PokemonCardProps {
         name: string;
@@ -9,16 +10,6 @@ import { TypesPokemon } from '../types/Types.enum';
     }
 
     defineProps<PokemonCardProps>()
-
-    const getTypeColor = (typeName: string): string => {
-        return TypesPokemon[typeName as keyof typeof TypesPokemon]  || '#000'
-    }
-
-    const capitalizeFirstLetter = (name: string): string => {
-        if (!name) return ""; 
-
-        return name.charAt(0).toLocaleUpperCase() + name.slice(1).toLowerCase()
-    }
 
     
 </script>

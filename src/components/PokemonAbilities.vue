@@ -1,15 +1,11 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
+import { capitalizeFirstLetter } from '../utils/methods';
 
 const props = defineProps<{
     abilities: any[] | undefined,
     background: string
 }>()
-
-const capitalizeFirstLetter = (name: string): string => {
-    if (!name) return '';
-    return name.charAt(0).toLocaleUpperCase() + name.slice(1).toLowerCase()
-}
 
 </script>
 
