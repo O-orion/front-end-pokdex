@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { usePokemonStore } from '../stores/pokemonStore';
 
-const searchQuery = ref("");
+const searchQuery = ref<string>("");
 const store = usePokemonStore();
 
 // Função para realizar pesquisa ao pressionar tecla enter
