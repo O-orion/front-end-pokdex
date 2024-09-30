@@ -1,0 +1,21 @@
+.pokemon-habilities {
+    color: #5e5e5ecc;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .pokemon-habilities {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .pokemon-habilities {
+        font-size: 16px;
+    }
+
+}
