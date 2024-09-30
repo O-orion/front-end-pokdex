@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PokemonStatus.vuew > Deve renderizar corretamente com diferentes status (Snapshot) 1`] = `
+"<div class="container-status">
+  <div class="box-status">
+    <p class="status-name">Hp</p>
+    <div class="progress-container">
+      <div class="progress-bar" style="width: 25.098039215686274%;"><span class="progress-number">64</span></div>
+    </div>
+  </div>
+  <div class="box-status">
+    <p class="status-name">Defense</p>
+    <div class="progress-container">
+      <div class="progress-bar" style="width: 39.21568627450981%;"><span class="progress-number">100</span></div>
+    </div>
+  </div>
+</div>"
+`;

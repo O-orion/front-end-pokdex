@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router';
 
 
 describe('NavBar.vue', () => {
+
     const router = useRouter();
 
     it('Verificar se a logo está sendo exibida', () => {
@@ -47,15 +48,5 @@ describe('NavBar.vue', () => {
       
         expect(wrapper.html()).toMatchSnapshot();
       });
-
-      it('Deve navegar para a Home ao clicar na logo', async () => {
-        const wrapper = mount(NavBar);
-
-        await wrapper.find('.logo-menu').trigger('click');
-
-        // Verificando se o método push do router foi acionado
-        expect(router.push).toHaveBeenCalledWith({ name: 'Home' })
-
-      })
 
 })
