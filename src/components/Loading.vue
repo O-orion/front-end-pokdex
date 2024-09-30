@@ -5,7 +5,7 @@
 <template>
     <section class="container-loading">
         <div class="box-loading">
-            <img class="img-pokebola" src="../assets/img/pokebola.png" alt="">
+            <img class="img-pokebola" src="../assets/img/pokebola.png" alt="loading pokebola">
         </div>
         <p>Carregando...</p>
     </section>

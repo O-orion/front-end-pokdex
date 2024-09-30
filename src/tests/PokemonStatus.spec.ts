@@ -99,6 +99,4 @@ describe('PokemonStatus.vuew', () => {
         const statusItems = wrapper.findAll('.box-status');
         expect(statusItems.length).toBe(0);
     });
-    
-
 })
