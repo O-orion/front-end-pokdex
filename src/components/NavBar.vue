@@ -10,7 +10,7 @@
 
 <template>
     <section class="container-menu">
-        <img @click="goToHome" class="logo-menu"src="../assets/img/pokebola.png" alt="logo pokedex" ></img>
+        <img @click="goToHome" class="logo-menu" src="../assets/img/pokebola.png" alt="logo pokedex" ></img>
         <nav class="links-menu" >
             <a @click="goToHome" class="link-menu" >Home</a>
             <a  class="link-menu" >Home</a>
