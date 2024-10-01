@@ -124,6 +124,4 @@ describe('PokemonDetail.vuew', () => {
 
     })
 
-    
-
 })
