@@ -8,6 +8,7 @@ import { PokemonDetailsType } from '../types/PokemonDetails.type';
 import { getTypeColor } from '../utils/methods';
 import PokemonDetailHeader from './PokemonDetailHeader.vue';
 import PokemonDetailTitulo from './PokemonDetailTitulo.vue';
+import PokemonVersion from './PokemonVersion.vue';
 
 const props = defineProps<{
     pokemon: PokemonDetailsType | null
@@ -34,9 +35,13 @@ const props = defineProps<{
             <PokemonMoves :background="getTypeColor(pokemon?.types[0].type.name)" :moves="pokemon?.moves">
             </PokemonMoves>
 
-            <PokemonDetailTitulo titulo="Shinys"></PokemonDetailTitulo>
+            <PokemonDetailTitulo titulo="Versão Shiny"></PokemonDetailTitulo>
             <div :style="{ backgroundColor: getTypeColor(pokemon?.types[0].type.name) }" class="borda"></div>
             <PokemonShiny :shiny="pokemon?.sprites"></PokemonShiny>
+
+            <PokemonDetailTitulo titulo="Versões do Pokemon" ></PokemonDetailTitulo>
+            <div :style="{ backgroundColor: getTypeColor(pokemon?.types[0].type.name) }" class="borda"></div>
+            <PokemonVersion :pokemon="pokemon" ></PokemonVersion>
 
         </section>
     </section>

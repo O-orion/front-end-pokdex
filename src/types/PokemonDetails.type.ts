@@ -54,4 +54,5 @@ interface Sprite {
   back_shiny: string;
   front_default: string;
   front_shiny: string;
+  versions: any[]
 }
