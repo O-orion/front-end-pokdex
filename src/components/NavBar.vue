@@ -12,9 +12,21 @@ const goToHome = () => {
     <section class="container-menu">
         <img @click="goToHome" class="logo-menu" src="../assets/img/pokebola.png" alt="logo pokedex"></img>
         <nav class="links-menu">
-            <a @click="goToHome" class="link-menu">Home</a>
-            <a class="link-menu">Home</a>
-            <a class="link-menu">Home</a>
+            <a @click="goToHome" class="link-menu">
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+            </a>
+            <a class="link-menu">
+                <span class="material-symbols-outlined">
+                    grade
+                </span>
+            </a>
+            <a class="link-menu">
+                <span class="material-symbols-outlined">
+                    manage_search
+                </span>
+            </a>
         </nav>
 
         <div class="profile-icon">

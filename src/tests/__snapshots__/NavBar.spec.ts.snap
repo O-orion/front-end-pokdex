@@ -2,7 +2,7 @@
 
 exports[`NavBar.vue > deve renderizar o componente corretamente (snapshot) 1`] = `
 "<section class="container-menu"><img class="logo-menu" src="/src/assets/img/pokebola.png" alt="logo pokedex">
-  <nav class="links-menu"><a class="link-menu">Home</a><a class="link-menu">Home</a><a class="link-menu">Home</a></nav>
+  <nav class="links-menu"><a class="link-menu">Home</a><a class="link-menu">Favoritos</a><a class="link-menu">Histórico</a></nav>
   <div class="profile-icon"><span class="icon material-symbols-outlined"> person </span></div>
 </section>"
 `;
