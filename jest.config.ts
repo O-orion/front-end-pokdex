@@ -8,7 +8,6 @@ const config: Config.InitialOptions = {
     moduleNameMapper: {
         "^@vue/test-utils": "<rootDir>/node_modules/@vue/test-utils/dist/vue-test-utils.cjs.js"
     },
-    // Outras configurações adicionais
 };
 
 export default config;

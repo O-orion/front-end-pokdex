@@ -1,52 +1,46 @@
-import { mount } from '@vue/test-utils';
-import NavBar from '../components/NavBar.vue';
-import { useRouter } from 'vue-router';
+import { mount } from "@vue/test-utils";
+import NavBar from "../components/NavBar.vue";
+import { useRouter } from "vue-router";
 
+describe("NavBar.vue", () => {
+  const router = useRouter();
 
-describe('NavBar.vue', () => {
+  it("Verificar se a logo está sendo exibida", () => {
+    const wrapper = mount(NavBar);
 
-    const router = useRouter();
+    const logoPokebola = wrapper.find(".logo-menu");
 
-    it('Verificar se a logo está sendo exibida', () => {
-        const wrapper = mount(NavBar);
+    // Verificando se o elemento existe
+    expect(logoPokebola.exists()).toBe(true);
 
-        const logoPokebola = wrapper.find('.logo-menu');
+    // Verificando se está exibindo a imagem da pokebola;
+    expect(logoPokebola.attributes("src")).toBe("/src/assets/img/pokebola.png");
+  });
 
-        // Verificando se o elemento existe
-        expect(logoPokebola.exists()).toBe(true);
+  it("Verificando se menu contém três links", () => {
+    const wrapper = mount(NavBar);
 
-        // Verificando se está exibindo a imagem da pokebola;
-        expect(logoPokebola.attributes('src')).toBe('/src/assets/img/pokebola.png')
+    const linksMenu = wrapper.findAll(".link-menu");
 
-    })
+    // Verificando se contém três links
+    expect(linksMenu.length).toBe(3);
 
-    it('Verificando se menu contém três links', () => {
-        const wrapper = mount(NavBar);
+    // Verificando se o primeiro link é para interface home
+    expect(linksMenu[0].text()).toBe("Home");
+  });
 
-        const linksMenu =  wrapper.findAll('.link-menu')
+  it("Verificando se o icon é o person", () => {
+    const wrapper = mount(NavBar);
 
-        // Verificando se contém três links
-        expect(linksMenu.length).toBe(3)
+    const icon = wrapper.find(".icon");
 
-        // Verificando se o primeiro link é para interface home
-        expect(linksMenu[0].text()).toBe('Home')
+    // Verificando se  o icone de  perfil
+    expect(icon.text()).toBe("person");
+  });
 
-    })
+  it("deve renderizar o componente corretamente (snapshot)", () => {
+    const wrapper = mount(NavBar);
 
-    it('Verificando se o icon é o person', () => {
-        const wrapper = mount(NavBar);
-
-        const icon = wrapper.find('.icon');
-
-        // Verificando se  o icone de  perfil
-        expect(icon.text()).toBe('person')
-
-    })
-
-    it("deve renderizar o componente corretamente (snapshot)", () => {
-        const wrapper = mount(NavBar);
-      
-        expect(wrapper.html()).toMatchSnapshot();
-      });
-
-})
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+});

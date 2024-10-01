@@ -1,9 +1,9 @@
-import { defineStore } from 'pinia';
-import axios from 'axios';
-import { Pokemon } from '../types/PokemonList.type';
-import { PokemonDetailsType } from '../types/PokemonDetails.type';
+import { defineStore } from "pinia";
+import axios from "axios";
+import { Pokemon } from "../types/PokemonList.type";
+import { PokemonDetailsType } from "../types/PokemonDetails.type";
 
-export const usePokemonStore = defineStore('pokemonStore', {
+export const usePokemonStore = defineStore("pokemonStore", {
   state: () => ({
     pokemons: [] as PokemonDetailsType[],
     isLoading: false,
@@ -17,20 +17,24 @@ export const usePokemonStore = defineStore('pokemonStore', {
     async loadPokemons(offset = 0, limit = 20) {
       this.isLoading = true;
       try {
-        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`);
+        const response = await axios.get(
+          `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
+        );
         const pokemonResults = response.data.results;
-        
+
         this.count = response.data.count; // Total de pokémons
         this.next = response.data.next; // Próxima URL
         this.previous = response.data.previous; // URL anterior
-        
+
         const pokemonDetails = await Promise.all(
           pokemonResults.map((pokemon: Pokemon) => axios.get(pokemon.url))
         );
-        
-        this.pokemons = pokemonDetails.map((detail) => detail.data as PokemonDetailsType);
+
+        this.pokemons = pokemonDetails.map(
+          (detail) => detail.data as PokemonDetailsType
+        );
       } catch (error) {
-        console.error('Erro ao carregar Pokémon:', error);
+        console.error("Erro ao carregar Pokémon:", error);
       } finally {
         this.isLoading = false;
       }
@@ -55,21 +59,22 @@ export const usePokemonStore = defineStore('pokemonStore', {
       this.loadPokemons(offset, this.limit);
     },
 
-    async searchPokemon (name: string) {
+    async searchPokemon(name: string) {
       this.isLoading = true;
-      
+
       if (name.trim() === "") {
         this.loadPokemons();
-        return
+        return;
       }
 
       try {
-        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`);
-        this.pokemons = [response.data as PokemonDetailsType]
+        const response = await axios.get(
+          `https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`
+        );
+        this.pokemons = [response.data as PokemonDetailsType];
       } catch (error) {
-        console.error('error', error);
-
-      }finally {
+        console.error("error", error);
+      } finally {
         this.isLoading = false;
       }
     },
@@ -78,16 +83,15 @@ export const usePokemonStore = defineStore('pokemonStore', {
       this.isLoading = true;
 
       try {
-        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        const response = await axios.get(
+          `https://pokeapi.co/api/v2/pokemon/${id}`
+        );
         return response.data as PokemonDetailsType;
-
       } catch (error) {
         console.log(error);
       } finally {
         this.isLoading = false;
       }
-
-    }
+    },
   },
 });
-

@@ -1,123 +1,123 @@
 @import "../variables.css";
 
 .container-menu {
-    font-family: "Press Start 2P";
-    background-color: var(--primary-color);
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    flex-wrap: wrap;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Press Start 2P";
+  background-color: var(--primary-color);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .links-menu {
-    display: flex;
-    gap: var(--spacing-md);
-    flex-wrap: wrap;
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
 }
 
 .link-menu {
-    cursor: pointer;
-    color: var(--primary-color);
-    background-color: var(--text-color);
-    padding: 5px 10px;
-    border-radius: var(--border-radius-md);
-    text-decoration: none;
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-bold);
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
-    box-shadow: 0 3px 6px var(--box-shadow-black);
+  cursor: pointer;
+  color: var(--primary-color);
+  background-color: var(--text-color);
+  padding: 5px 10px;
+  border-radius: var(--border-radius-md);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  box-shadow: 0 3px 6px var(--box-shadow-black);
 }
 
 .link-menu:hover {
-    background-color: var(--highlight-color);
-    color: var(--text-color);
-    transform: translateY(-3px);
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+  transform: translateY(-3px);
 }
 
 .link-menu:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .logo-menu {
-    cursor: pointer;
-    width: var(--image-size-md);
-    height: var(--image-size-md);
-    background-color: white;
-    padding: 5px;
-    border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  width: var(--image-size-md);
+  height: var(--image-size-md);
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
 }
 
-.logo-menu  {
-    width: 50px;
-    height: 50px;
+.logo-menu {
+  width: 50px;
+  height: 50px;
 }
 
 .logo-menu:hover {
-    transform: rotate(15deg); /* Efeito de rotação ao passar o mouse */
+  transform: rotate(15deg); /* Efeito de rotação ao passar o mouse */
 }
 
 .profile-icon {
-    padding: 8px;
-    background-color: var(--text-color);
-    border-radius: var(--border-radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0 2px 4px var(--box-shadow-black);
-    width: 40px;
-    height: 40px;
+  padding: 8px;
+  background-color: var(--text-color);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 2px 4px var(--box-shadow-black);
+  width: 40px;
+  height: 40px;
 }
 
 .icon {
-    color: #4b4b4b;
-    font-size: 24px;
+  color: #4b4b4b;
+  font-size: 24px;
 }
 
 .profile-icon:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
-    .container-menu {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
+  .container-menu {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
 
-    .links-menu {
-        justify-content: center;
-        gap: 15px;
-        margin-top: 10px;
-    }
+  .links-menu {
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
 
-    .logo-menu {
-        width: 40px;
-        height: 40px;
-    }
+  .logo-menu {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (max-width: 480px) {
-    .link-menu {
-        font-size: 12px;
-        padding: 4px 8px;
-    }
+  .link-menu {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
 
-    .profile-icon {
-        width: 35px;
-        height: 35px;
-    }
+  .profile-icon {
+    width: 35px;
+    height: 35px;
+  }
 
-    .logo-menu {
-        width: 35px;
-        height: 35px;
-    }
+  .logo-menu {
+    width: 35px;
+    height: 35px;
+  }
 }

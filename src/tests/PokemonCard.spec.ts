@@ -80,9 +80,7 @@ describe("PokemonCard.vue", () => {
         types: [{ type: { name: "water" } }],
       },
     });
-  
+
     expect(wrapper.html()).toMatchSnapshot();
   });
-  
-
 });

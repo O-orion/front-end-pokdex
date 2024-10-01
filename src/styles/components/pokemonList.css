@@ -1,45 +1,44 @@
 @import "../variables.css";
 
 .container-pokemon-list {
-    padding: 25px;
-    display: flex;
-    justify-content: center;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
 }
 
 .pokemon-list {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-/* Estilos para tornar os cartões responsivos */
-.pokemon-list > * { /* Seleciona todos os filhos da pokemon-list */
-    flex: 1 1 200px; /* Permite que os cartões cresçam e encolham com um tamanho base de 200px */
-    min-width: 250px; /* Largura mínima para os cartões */
-    max-width: 290px; /* Largura máxima para os cartões */
+.pokemon-list > * {
+  flex: 1 1 200px;
+  min-width: 250px;
+  max-width: 290px;
 }
 
 @media (max-width: 600px) {
-    .pokemon-list > * {
-        flex: 1 1 100%; /* Em telas menores, os cartões ocupam 100% da largura */
-        justify-content: center;
-        align-items: center;
-    }
+  .pokemon-list > * {
+    flex: 1 1 100%;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-    .pokemon-list > * {
-        flex: 1 1 calc(50% - 20px); /* Para telas médias, dois cartões por linha */
-        justify-content: center;
-        align-items: center;
-    }
+  .pokemon-list > * {
+    flex: 1 1 calc(50% - 20px);
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (min-width: 901px) {
-    .pokemon-list > * {
-        flex: 1 1 calc(33.33% - 20px); /* Para telas grandes, três cartões por linha */
-        justify-content: center;
-        align-items: center;
-    }
+  .pokemon-list > * {
+    flex: 1 1 calc(33.33% - 20px);
+    justify-content: center;
+    align-items: center;
+  }
 }

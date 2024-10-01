@@ -1,9 +1,9 @@
-<script setup lang="ts" >
-    import { defineProps } from 'vue';
+<script setup lang="ts">
+import { defineProps } from 'vue';
 
-    const props = defineProps<{
-        titulo: string
-    }>()
+const props = defineProps<{
+    titulo: string
+}>()
 
 </script>
 
@@ -12,4 +12,4 @@
 </template>
 
 
-<style scoped src="../styles/components/pokemonDetailsTitulo.css" ></style>
+<style scoped src="../styles/components/pokemonDetailsTitulo.css"></style>

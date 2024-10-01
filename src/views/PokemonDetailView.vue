@@ -1,4 +1,4 @@
-<script setup lang="ts" >
+<script setup lang="ts">
 import { onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import PokemonDetail from '../components/PokemonDetail.vue';
@@ -22,8 +22,8 @@ onMounted(async () => {
 </script>
 
 <template>
-    <Loading v-if="store.isLoading" ></Loading>
-    <PokemonDetail  :pokemon="pokemonDetails"  v-else ></PokemonDetail>
+    <Loading v-if="store.isLoading"></Loading>
+    <PokemonDetail :pokemon="pokemonDetails" v-else></PokemonDetail>
 </template>
 
 <style></style>

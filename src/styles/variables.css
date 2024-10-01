@@ -1,48 +1,48 @@
 /* src/assets/styles/variables.css */
 :root {
-    --text-color: rgba(255, 255, 255, 0.87);
-    --background-color: #575759;
-    --primary-color: #ED4036;
-    --secondary-color: #007BFF;
-    --hover-color: #747bff;
-    --button-bg: #f9f9f9;
-    --box-shadow-black: rgba(0, 0, 0, 0.1);
+  --text-color: rgba(255, 255, 255, 0.87);
+  --background-color: #575759;
+  --primary-color: #ed4036;
+  --secondary-color: #007bff;
+  --hover-color: #747bff;
+  --button-bg: #f9f9f9;
+  --box-shadow-black: rgba(0, 0, 0, 0.1);
 
-    /* Tamanhos de texto */
-    --font-size-xs: 12px;
-    --font-size-sm: 14px;
-    --font-size-md: 16px;
-    --font-size-lg: 20px;
-    --font-size-xl: 24px;
-    --font-size-xxl: 32px;
+  /* Tamanhos de texto */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
 
-    /* Pesos da fonte */
-    --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-bold: 700;
+  /* Pesos da fonte */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 
-    /* Tamanho de Imagens */
-    --image-size-sm: 40px;
-    --image-size-md: 80px;
-    --image-size-lg: 120px;
+  /* Tamanho de Imagens */
+  --image-size-sm: 40px;
+  --image-size-md: 80px;
+  --image-size-lg: 120px;
 
-    /* Tamanho para Bordas */
-    --border-radius-sm: 4px;
-    --border-radius-md: 8px;
-    --border-radius-lg: 16px;
-    --border-radius-lx: 24px;
-    --border-radius-full: 50%;
+  /* Tamanho para Bordas */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-lx: 24px;
+  --border-radius-full: 50%;
 
-    /* Largura da borda */
-    --border-width-thin: 1px;
-    --border-width-medium: 2px;
-    --border-width-thick: 4px;
+  /* Largura da borda */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
 
-    /*  Espaçamento */
-    --spacing-xs: 2px;
-    --spacing-sm: 8px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 32px;
-    --spacing-xxl: 48px;
+  /*  Espaçamento */
+  --spacing-xs: 2px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
 }

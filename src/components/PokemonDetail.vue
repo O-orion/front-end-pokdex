@@ -17,23 +17,24 @@ const props = defineProps<{
 
 <template>
     <section class="container-details">
-        <PokemonDetailHeader :pokemon="pokemon" ></PokemonDetailHeader>
+        <PokemonDetailHeader :pokemon="pokemon"></PokemonDetailHeader>
 
         <section class="pokemon-body">
-            <PokemonDetailTitulo titulo="Habilidades" ></PokemonDetailTitulo>
+            <PokemonDetailTitulo titulo="Habilidades"></PokemonDetailTitulo>
             <div :style="{ backgroundColor: getTypeColor(pokemon?.types[0].type.name) }" class="borda"></div>
             <PokemonAbilities :background="getTypeColor(pokemon?.types[0].type.name)" :abilities="pokemon?.abilities">
             </PokemonAbilities>
 
-            <PokemonDetailTitulo titulo="Estatísticas" ></PokemonDetailTitulo>
+            <PokemonDetailTitulo titulo="Estatísticas"></PokemonDetailTitulo>
             <div :style="{ backgroundColor: getTypeColor(pokemon?.types[0].type.name) }" class="borda"></div>
             <PokemonStatus :status="pokemon?.stats"></PokemonStatus>
 
-            <PokemonDetailTitulo titulo="Moves" ></PokemonDetailTitulo>
+            <PokemonDetailTitulo titulo="Moves"></PokemonDetailTitulo>
             <div :style="{ backgroundColor: getTypeColor(pokemon?.types[0].type.name) }" class="borda"></div>
-            <PokemonMoves :background="getTypeColor(pokemon?.types[0].type.name)" :moves="pokemon?.moves"></PokemonMoves>
+            <PokemonMoves :background="getTypeColor(pokemon?.types[0].type.name)" :moves="pokemon?.moves">
+            </PokemonMoves>
 
-            <PokemonDetailTitulo titulo="Shinys" ></PokemonDetailTitulo>
+            <PokemonDetailTitulo titulo="Shinys"></PokemonDetailTitulo>
             <div :style="{ backgroundColor: getTypeColor(pokemon?.types[0].type.name) }" class="borda"></div>
             <PokemonShiny :shiny="pokemon?.sprites"></PokemonShiny>
 

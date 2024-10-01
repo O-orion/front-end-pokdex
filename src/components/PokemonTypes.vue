@@ -1,11 +1,11 @@
 <script setup lang="ts">
-    import { capitalizeFirstLetter } from '../utils/methods';
-    import { getTypeColor } from '../utils/methods';
-    import { defineProps } from 'vue';
+import { capitalizeFirstLetter } from '../utils/methods';
+import { getTypeColor } from '../utils/methods';
+import { defineProps } from 'vue';
 
-    const props = defineProps<{
-        types: any[] | undefined
-    }>()
+const props = defineProps<{
+    types: any[] | undefined
+}>()
 
 </script>
 
@@ -17,4 +17,4 @@
     </div>
 </template>
 
-<style src="../styles/components/pokemonTypes.css" scoped >  </style>
+<style src="../styles/components/pokemonTypes.css" scoped></style>

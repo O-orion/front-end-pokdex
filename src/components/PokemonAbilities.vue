@@ -11,7 +11,7 @@ const props = defineProps<{
 
 <template>
     <div class="container-abilities">
-        <div :style="{backgroundColor: background}" v-for="abilitie in abilities" class="pokemon-abilitie">
+        <div :style="{ backgroundColor: background }" v-for="abilitie in abilities" class="pokemon-abilitie">
             <p> {{ capitalizeFirstLetter(abilitie.ability.name) }} </p>
         </div>
     </div>

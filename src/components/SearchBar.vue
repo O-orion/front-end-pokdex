@@ -16,13 +16,7 @@ const handleSearch = (event: KeyboardEvent) => {
 
 <template>
     <section class="container-search">
-        <input 
-        class="input-search" 
-        placeholder="pesquisar" 
-        type="text"
-        v-model="searchQuery"
-        @keyup="handleSearch"
-        >
+        <input class="input-search" placeholder="pesquisar" type="text" v-model="searchQuery" @keyup="handleSearch">
     </section>
 </template>
 

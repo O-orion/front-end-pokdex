@@ -1,15 +1,15 @@
 @import "../variables.css";
 
 .container-abilities {
-    margin-top: 20px;
-    display: flex;
-    gap: 5px;
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
 }
 
 /* :style="{backgroundColor: background}" */
 
 .pokemon-abilitie {
-    background-color: #808080;
-    padding: 5px;
-    border-radius: 8px;
+  background-color: #808080;
+  padding: 5px;
+  border-radius: 8px;
 }

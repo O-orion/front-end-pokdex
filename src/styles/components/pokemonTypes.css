@@ -1,38 +1,33 @@
 .types-pokemon {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 .type {
-    padding: 5px 10px;
-    font-size: 14px;
-    text-align: center;
-    color: #fff;
-    background-color: #F1D688;
-    border-radius: 16px;
-    transition: background-color 0.3s ease;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  background-color: #f1d688;
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .type:hover {
-    background-color: #c3a865;
+  background-color: #c3a865;
 }
 
 @media (max-width: 768px) {
-
-    .type {
-        font-size: 12px;
-        padding: 4px 8px;
-    }
-
+  .type {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
 }
 
 @media (max-width: 480px) {
-
-    .type {
-        font-size: 10px;
-        padding: 3px 6px;
-    }
-
-
+  .type {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
 }

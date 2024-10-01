@@ -1,4 +1,4 @@
-<script setup lang="ts" >
+<script setup lang="ts">
 
 </script>
 
@@ -11,4 +11,4 @@
     </section>
 </template>
 
-<style  scoped src="../styles//components/loading/loading.css" ></style>
+<style scoped src="../styles//components/loading/loading.css"></style>

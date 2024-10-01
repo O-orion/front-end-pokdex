@@ -1,54 +1,54 @@
 @import "../variables.css";
 
-.card-pokemon{
-    background-color: var(--text-color);
-    width: 200px;
-    height: 220px;
-    border-radius: var(--border-radius-md);
-    border: var(--primary-color) 2px solid;
+.card-pokemon {
+  background-color: var(--text-color);
+  width: 200px;
+  height: 220px;
+  border-radius: var(--border-radius-md);
+  border: var(--primary-color) 2px solid;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    gap: 10px;
-    color: #000;
+  gap: 10px;
+  color: #000;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .imagem-pokemon {
-    width: 90px;
+  width: 90px;
 }
 
 .informacoes-pokemon {
-    width: 100%;
-    padding: 0 0 0 10px;
+  width: 100%;
+  padding: 0 0 0 10px;
 }
 
 .nome-pokemon {
-    font-size: var(--font-size-md);
-    font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
 }
 
 .numero-pokemon {
-    font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
 }
 
 .pokemon-tags {
-    width: 100%;
-    display: flex;
-    padding: 0 0 0 10px;
-    gap: 5px;
+  width: 100%;
+  display: flex;
+  padding: 0 0 0 10px;
+  gap: 5px;
 }
 
-.pokemon-tags  p {
-    color: #fff;
-    padding: 4px;
-    border-radius: 8px;
-    min-width: 50px;
-    text-align: center;
-    margin-bottom: 10px;
+.pokemon-tags p {
+  color: #fff;
+  padding: 4px;
+  border-radius: 8px;
+  min-width: 50px;
+  text-align: center;
+  margin-bottom: 10px;
 }
