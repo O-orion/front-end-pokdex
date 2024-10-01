@@ -37,10 +37,12 @@ export const usePokemonStore = defineStore("pokemonStore", {
         );
       } catch (error) {
         console.error("Erro ao carregar Pokémon:", error);
+      
       } finally {
         this.isLoading = false;
       }
     },
+
     nextPage() {
       if (this.next) {
         const offset = this.currentPage * this.limit;
@@ -48,6 +50,7 @@ export const usePokemonStore = defineStore("pokemonStore", {
         this.loadPokemons(offset, this.limit);
       }
     },
+
     previousPage() {
       if (this.previous && this.currentPage > 1) {
         const offset = (this.currentPage - 2) * this.limit;
@@ -55,6 +58,7 @@ export const usePokemonStore = defineStore("pokemonStore", {
         this.loadPokemons(offset, this.limit);
       }
     },
+
     goToPage(pageNumber: number) {
       const offset = (pageNumber - 1) * this.limit;
       this.currentPage = pageNumber;
@@ -75,7 +79,8 @@ export const usePokemonStore = defineStore("pokemonStore", {
         );
         this.pokemons = [response.data as PokemonDetailsType];
       } catch (error) {
-        console.error("error", error);
+        console.error("Erro ao buscar Pokémon:", error);
+        
       } finally {
         this.isLoading = false;
       }
@@ -90,16 +95,16 @@ export const usePokemonStore = defineStore("pokemonStore", {
         );
         return response.data as PokemonDetailsType;
       } catch (error) {
-        console.log(error);
+        console.error("Erro ao buscar Pokémon por ID:", error);
       } finally {
         this.isLoading = false;
       }
     },
 
-    // Carregar os pokémons com base no tipo selecionado
     async loadPokemonsByType(type: string) {
       this.isLoading = true;
       this.selectedType = type;
+      this.currentPage = 1; // Resetar para a primeira página
       try {
         const response = await axios.get(
           `https://pokeapi.co/api/v2/type/${type}`
@@ -120,7 +125,6 @@ export const usePokemonStore = defineStore("pokemonStore", {
       }
     },
 
-    // Carregar todos os tipos de Pokémon
     async loadPokemonTypes() {
       try {
         const response = await axios.get('https://pokeapi.co/api/v2/type');
