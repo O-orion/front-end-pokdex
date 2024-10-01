@@ -1,8 +1,10 @@
+@import "../variables.css";
+
 .pokemon-habilities {
   color: #5e5e5ecc;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   margin-top: 20px;
-  font-size: 20px;
+  font-size: var(--font-size-lg);
 }
 
 @media (max-width: 768px) {
@@ -13,6 +15,6 @@
 
 @media (max-width: 480px) {
   .pokemon-habilities {
-    font-size: 16px;
+    font-size: var(--font-size-md);
   }
 }

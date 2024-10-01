@@ -15,10 +15,10 @@
 .box-move {
   padding: 8px 16px;
   background-color: #3b82f6;
-  color: white;
+  color: var(--text-color);
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -31,7 +31,7 @@
 .box-move p {
   margin: 0;
   text-transform: capitalize;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 @media (max-width: 768px) {
@@ -40,7 +40,7 @@
   }
 
   .box-move {
-    font-size: 13px;
+    font-size: var(--font-size-sm);
   }
 }
 

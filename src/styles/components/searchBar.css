@@ -23,7 +23,7 @@
 
 .input-search:hover {
   border-color: var(--primary-color);
-  background-color: #fff;
+  background-color: var(--text-color);
 }
 
 .input-search:focus {
@@ -34,7 +34,7 @@
 
 .input-search::placeholder {
   color: #999;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
 }
 
 @media (max-width: 600px) {

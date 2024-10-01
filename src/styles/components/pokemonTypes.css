@@ -1,3 +1,5 @@
+@import "../variables.css";
+
 .types-pokemon {
   display: flex;
   gap: 10px;
@@ -6,11 +8,11 @@
 
 .type {
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   text-align: center;
-  color: #fff;
+  color: var(--text-color);
   background-color: #f1d688;
-  border-radius: 16px;
+  border-radius: var(--font-size-md);
   transition: background-color 0.3s ease;
 }
 
@@ -20,7 +22,7 @@
 
 @media (max-width: 768px) {
   .type {
-    font-size: 12px;
+    font-size: var(--font-size-xs);
     padding: 4px 8px;
   }
 }

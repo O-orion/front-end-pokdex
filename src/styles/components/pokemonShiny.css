@@ -1,3 +1,5 @@
+@import "../variables.css";
+
 .container-shiny {
   display: flex;
   justify-content: center;
@@ -18,7 +20,7 @@
   height: 150px;
   overflow: hidden;
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--text-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }

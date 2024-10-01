@@ -1,3 +1,5 @@
+@import "../variables.css";
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -9,18 +11,18 @@
 
 .pagination-btn {
   background-color: #d8900b;
-  color: white;
+  color: var(--button-bg);
   border: none;
   padding: 8px 16px;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: var(--border-radius-md);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .pagination-btn span {
-  font-size: 16px;
+  font-size: var(--font-size-md);
   line-height: 1;
 }
 
@@ -39,7 +41,7 @@
 }
 
 span {
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
 }
 
 
@@ -51,7 +53,7 @@ span {
 
   .pagination-btn {
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: var(--font-size-sm);
   }
 }
 
