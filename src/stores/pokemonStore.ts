@@ -12,6 +12,8 @@ export const usePokemonStore = defineStore("pokemonStore", {
     previous: null as string | null, // URL da página anterior
     currentPage: 1, // Página atual
     limit: 20, // Número de pokémons por página
+    pokemonTypes: [] as string[], // Armazena os tipos de Pokémon
+    selectedType: '', // Tipo de Pokémon selecionado para filtrar
   }),
   actions: {
     async loadPokemons(offset = 0, limit = 20) {
@@ -91,6 +93,40 @@ export const usePokemonStore = defineStore("pokemonStore", {
         console.log(error);
       } finally {
         this.isLoading = false;
+      }
+    },
+
+    // Carregar os pokémons com base no tipo selecionado
+    async loadPokemonsByType(type: string) {
+      this.isLoading = true;
+      this.selectedType = type;
+      try {
+        const response = await axios.get(
+          `https://pokeapi.co/api/v2/type/${type}`
+        );
+        const pokemonResults = response.data.pokemon.map((p: any) => p.pokemon);
+
+        const pokemonDetails = await Promise.all(
+          pokemonResults.map((pokemon: Pokemon) => axios.get(pokemon.url))
+        );
+
+        this.pokemons = pokemonDetails.map(
+          (detail) => detail.data as PokemonDetailsType
+        );
+      } catch (error) {
+        console.error("Erro ao carregar Pokémon por tipo:", error);
+      } finally {
+        this.isLoading = false;
+      }
+    },
+
+    // Carregar todos os tipos de Pokémon
+    async loadPokemonTypes() {
+      try {
+        const response = await axios.get('https://pokeapi.co/api/v2/type');
+        this.pokemonTypes = response.data.results.map((type: any) => type.name);
+      } catch (error) {
+        console.error("Erro ao carregar tipos de Pokémon:", error);
       }
     },
   },
