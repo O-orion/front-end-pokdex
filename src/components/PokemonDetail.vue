@@ -7,7 +7,7 @@ import PokemonShiny from './PokemonShiny.vue';
 import { PokemonDetailsType } from '../types/PokemonDetails.type';
 import { getTypeColor } from '../utils/methods';
 import PokemonDetailHeader from './PokemonDetailHeader.vue';
-import PokemonDetailTitulo from './PokemonDetailTito.vue';
+import PokemonDetailTitulo from './PokemonDetailTitulo.vue';
 
 const props = defineProps<{
     pokemon: PokemonDetailsType | null
