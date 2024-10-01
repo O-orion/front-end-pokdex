@@ -4,6 +4,7 @@
   align-items: center;
   gap: 10px;
   margin: 20px 0 0 0;
+  flex-wrap: wrap;
 }
 
 .pagination-btn {
@@ -39,4 +40,39 @@
 
 span {
   font-weight: bold;
+}
+
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+  .pagination {
+    gap: 5px;
+  }
+
+  .pagination-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .pagination-btn.active {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+
+  .pagination {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .pagination-btn {
+    display: inline-block;
+  }
 }
