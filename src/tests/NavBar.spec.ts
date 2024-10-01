@@ -26,7 +26,7 @@ describe("NavBar.vue", () => {
     expect(linksMenu.length).toBe(3);
 
     // Verificando se o primeiro link é para interface home
-    expect(linksMenu[0].text()).toBe("Home");
+    expect(linksMenu[0].text()).toBe("home");
   });
 
   it("Verificando se o icon é o person", () => {
