@@ -3,6 +3,18 @@
 
 Esta aplicação foi desenvolvida para oferecer uma experiência envolvente de exploração dos Pokémon utilizando Vue 3 com TypeScript e Vite. A ideia é fornecer uma interface intuitiva, fluida e moderna, utilizando boas práticas de desenvolvimento front-end, incluindo testes unitários, modularização, gerenciamento de estado com Pinia, conexão com a API de Pokémon.
 
+## Funcionalidades
+
+    📋 Funcionalidades Principais
+    
+A aplicação Pokémon Explorer oferece uma série de funcionalidades para melhorar a experiência do usuário na exploração dos Pokémon:
+
+Listagem Completa de Pokémon: Exibe todos os Pokémon disponíveis na PokeAPI com informações básicas como nome e imagem.
+Detalhes do Pokémon: Cada Pokémon tem uma página de detalhes que apresenta suas habilidades, tipos, estatísticas e sprites, incluindo as versões normais e shiny.
+Histórico de Pokémon: A aplicação armazena os Pokémon recentemente visualizados, permitindo fácil acesso a eles.
+Busca Dinâmica e Filtro por Tipo: Ferramenta de busca rápida que permite pesquisar por nome, além de filtros que permitem encontrar Pokémon por seus tipos específicos (Água, Fogo, Elétrico, etc.).
+Animações Fluídas: Transições suaves e animações modernas para uma experiência visual agradável.
+Teste Unitário: A aplicação conta com cobertura de testes unitários, garantindo o correto funcionamento da busca, exibição de detalhes e gerenciamento de estado.
 
 ## Tecnologias
 
