@@ -6,6 +6,11 @@ const router = useRouter();
 const goToHome = () => {
     router.push({ name: 'Home' })
 }
+
+const goToHistorico = () => {
+    router.push({ name: 'History' })
+}
+
 </script>
 
 <template>
@@ -23,7 +28,7 @@ const goToHome = () => {
                 </span>
             </a>
             <a class="link-menu">
-                <span class="material-symbols-outlined">
+                <span @click="goToHistorico" class="material-symbols-outlined">
                     manage_search
                 </span>
             </a>
